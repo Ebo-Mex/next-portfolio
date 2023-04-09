@@ -1,0 +1,5 @@
+@use "@/scss/utils/variables" as *;
+
+html {
+    background-color: $background-color;
+}

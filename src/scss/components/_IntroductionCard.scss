@@ -1,0 +1,14 @@
+.introductionCardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    .cardDescription {
+        align-self: flex-end;
+        text-align: end;
+        max-width: 60vw;
+        padding: 24px 8px;
+    }
+}
