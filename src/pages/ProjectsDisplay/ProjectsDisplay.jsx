@@ -2,9 +2,9 @@ import { ProjectCard } from "@/components";
 
 export const ProjectsDisplay = ({ projects }) => {
     return (
-        <div>
+        <div className="projectsDisplayContainer">
             <h2>Projects</h2>
-            <ul>
+            <ul className="projectsList">
                 {projects.map(
                     ({ label, description, thumbnailImageSrc, id }) => (
                         <li key={id}>

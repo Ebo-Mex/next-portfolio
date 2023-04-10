@@ -7,7 +7,9 @@
 @use "pages/MainView";
 @use "pages/Welcome";
 @use "pages/Toolbox";
+@use "pages/ProjectsDisplay";
 
 // COMPONENTS
 @use "components/NavBar";
 @use "components/IntroductionCard";
+@use "components/ProjectCard";
