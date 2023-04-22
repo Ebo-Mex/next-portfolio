@@ -1,0 +1,19 @@
+.achievementCardContainer {
+    background-color: rgb(41, 109, 155);
+    border-radius: 24px;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    .title {
+        margin-bottom: 32px;
+    }
+    .description {
+        text-align: justify;
+    }
+    .reference {
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
