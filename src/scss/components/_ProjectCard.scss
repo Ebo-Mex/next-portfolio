@@ -1,0 +1,24 @@
+.projectCardContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+    &.odd {
+        flex-direction: row-reverse;
+        .cardTitle {
+            text-align: right;
+        }
+    }
+    .cardData {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .cardDescription {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            text-align: justify;
+        }
+    }
+}

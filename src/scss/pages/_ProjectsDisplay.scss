@@ -1,0 +1,19 @@
+.projectsDisplayContainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .projectsList {
+        align-items: center;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 160px;
+        justify-content: space-between;
+        justify-self: center;
+        list-style: none;
+        max-width: 90%;
+        padding: 0;
+        width: 100%;
+    }
+}
