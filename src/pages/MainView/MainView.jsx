@@ -36,6 +36,35 @@ export const MainView = () => {
             id: 3,
         },
     ];
+    const achievements = [
+        {
+            title: "Something something",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            reference: {
+                linkText: "link",
+                url: "https://google.com",
+            },
+        },
+        {
+            title: "Another something",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            reference: {
+                linkText: "link",
+                url: "https://google.com",
+            },
+        },
+        {
+            title: "some   thing",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            reference: {
+                linkText: "link",
+                url: "https://google.com",
+            },
+        },
+    ];
 
     return (
         <>
@@ -43,7 +72,7 @@ export const MainView = () => {
             <Welcome />
             <Toolbox />
             <ProjectsDisplay projects={projects} />
-            <BragSection />
+            <BragSection achievements={achievements} />
             <MoreAboutMe />
         </>
     );
