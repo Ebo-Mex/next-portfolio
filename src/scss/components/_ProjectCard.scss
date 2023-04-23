@@ -1,12 +1,23 @@
 .projectCardContainer {
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 80px;
     &.odd {
         flex-direction: row-reverse;
         .cardTitle {
             text-align: right;
+        }
+    }
+    .imageContainer {
+        height: auto;
+        max-height: 200px;
+        position: relative;
+        width: 100%;
+        .image {
+            height: 100%;
+            position: relative !important;
+            width: 100%;
         }
     }
     .cardData {
@@ -15,9 +26,6 @@
         gap: 24px;
         .cardDescription {
             overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
             text-align: justify;
         }
     }

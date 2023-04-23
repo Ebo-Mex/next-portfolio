@@ -18,26 +18,41 @@
     "projects": [
         {
             "label": "Autonomous Drone Competition",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "thumbnailImageSrc": "https://picsum.photos/200/300",
+            "content": [
+                "The goal of the project was to make the drone capable of following a moving object. We had the freedom of choosing the object. The drone had to keep track of the object while a judge kept moving it around.",
+                "The team took the decision of using a blue cardboard since a solid color would make it easier for the drone to get closer. This part of the algorithm made use of OpenCV to detect the color, and area of the figure, the area allowed us to know the approximate distance to the target. Finally, to send the movement instructions we made use of ROS.",
+                "In the center of the cardboard a QR code was placed to make the algorithm more robust against possible similar objects in the environment. ZBar was used to make sure that the QR code was correct and keep track of it with the help of OpenCV.",
+                "After the successful testing (shown in the Gallery Section), a cardboard cube was going to be manufactured to avoid losing the target in case that the judge decided to rotate the object. However, due to the cancellation of the tournament as a consequence of the current pandemic, and to avoid unnecessary health risks, the project was cancelled."
+            ],
+            "thumbnailImageSrc": "/assets/PB2.png",
             "id": 0
         },
         {
             "label": "Object Recognition and Tracking Research",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "thumbnailImageSrc": "https://picsum.photos/200/300",
+            "content": [
+                "The aim of the research was to implement one state-of-the-art algorithm for object recognition and object tracking towards the development of an indoors autonomous drone.",
+                "Even though the unexpected pandemic made it impossible to conduct live tests on the drone, the results obtained through the research showed that the implementation of the YOLO and ATOM algorithms for object recognition and tracking was a complete success.",
+                "This research project allowed me to apply my knowledge in probability, algorithms, programming, and digital control that I acquired through my career. I even had to step out of my domain knowledge and learn about computer vision and machine learning."
+            ],
+            "thumbnailImageSrc": "/assets/MLResearch.png",
             "id": 1
         },
         {
             "label": "Autonomous Line Follower Car",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "thumbnailImageSrc": "https://picsum.photos/200/300",
+            "content": [
+                "The goal of this project was to build an autonomous line follower vehicle that was also capable of detection of obstacles. Once an obstacle was detected, the vehicle had to find a way around it and return to the path made by the line."
+            ],
+            "thumbnailImageSrc": "/assets/lineFollower.png",
             "id": 2
         },
         {
             "label": "Arcade Game Prototype",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "thumbnailImageSrc": "https://picsum.photos/200/300",
+            "content": [
+                "This project was made by me and a colleague during my second year of college, the objective was to take advantage of a PIC 18F4550 microcontroller and make an arcade game with the features of our choice.",
+                "Our final circuit was inside a plywood structure that we made by hand and the targets were designed and printed by us laser printer. The game also included a laser gun that was made by taking apart a plastic toy gun and assembling it with the components inside. The game was powered using a DC voltage source that we previously build.",
+                "The game accepted two players that would compete for 60 seconds and the one who got to shoot most of his objectives would be the winner."
+            ],
+            "thumbnailImageSrc": "/assets/arcadeGame.png",
             "id": 3
         }
     ],
