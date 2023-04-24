@@ -13,7 +13,7 @@ export const ProjectCard = ({ label, content, thumbnailImageSrc, idx }) => {
                     <Image
                         className="image"
                         fill
-                        sizes="30vw"
+                        sizes="100%"
                         object-fit="cover"
                         src={thumbnailImageSrc}
                         alt=""
@@ -23,18 +23,22 @@ export const ProjectCard = ({ label, content, thumbnailImageSrc, idx }) => {
             <div className="cardData">
                 <h3 className="cardTitle">{label}</h3>
                 <div>
-                    <p className="cardDescription">{content[0]}</p>
+                    <p className="cardContent">{content[0]}</p>
                     {isExpanded
-                        ? content
-                              .slice(1)
-                              .map((paragraph, pidx) => (
-                                  <p key={`${idx}-${pidx}`}>{paragraph}</p>
-                              ))
+                        ? content.slice(1).map((paragraph, pidx) => (
+                              <p className="cardContent" key={`${idx}-${pidx}`}>
+                                  {paragraph}
+                              </p>
+                          ))
                         : ""}
+                    {content.length > 1 ? (
+                        <button onClick={() => setIsExpanded(!isExpanded)}>
+                            {isExpanded ? "Show less" : "Read more"}
+                        </button>
+                    ) : (
+                        ""
+                    )}
                 </div>
-                <button onClick={() => setIsExpanded(!isExpanded)}>
-                    {isExpanded ? "Shrink" : "Expand"}
-                </button>
             </div>
         </div>
     );

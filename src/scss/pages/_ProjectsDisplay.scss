@@ -17,3 +17,11 @@
         width: 100%;
     }
 }
+// MOBILE
+@media only screen and (max-width: 1000px) {
+    .projectsDisplayContainer {
+        .projectsList {
+            gap: 40px;
+        }
+    }
+}

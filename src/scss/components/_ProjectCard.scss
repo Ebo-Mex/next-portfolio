@@ -11,9 +11,9 @@
     }
     .imageContainer {
         height: auto;
-        max-height: 200px;
+        height: 100%;
         position: relative;
-        width: 100%;
+        width: 300px;
         .image {
             height: 100%;
             position: relative !important;
@@ -24,9 +24,23 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
-        .cardDescription {
-            overflow: hidden;
+        max-width: 60vw;
+        .cardContent {
+            margin-bottom: 1em;
             text-align: justify;
+        }
+    }
+}
+// MOBILE
+@media only screen and (max-width: 1000px) {
+    .projectCardContainer,
+    .projectCardContainer.odd {
+        flex-direction: column-reverse;
+        .imageContainer {
+            width: 60vw;
+        }
+        .cardData {
+            width: 100vw;
         }
     }
 }
