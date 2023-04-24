@@ -1,7 +1,7 @@
 .projectCardContainer {
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 80px;
     &.odd {
         flex-direction: row-reverse;
@@ -9,16 +9,38 @@
             text-align: right;
         }
     }
+    .imageContainer {
+        height: auto;
+        height: 100%;
+        position: relative;
+        width: 300px;
+        .image {
+            height: 100%;
+            position: relative !important;
+            width: 100%;
+        }
+    }
     .cardData {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        .cardDescription {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
+        max-width: 60vw;
+        .cardContent {
+            margin-bottom: 1em;
             text-align: justify;
+        }
+    }
+}
+// MOBILE
+@media only screen and (max-width: 1000px) {
+    .projectCardContainer,
+    .projectCardContainer.odd {
+        flex-direction: column-reverse;
+        .imageContainer {
+            width: 60vw;
+        }
+        .cardData {
+            width: 100vw;
         }
     }
 }

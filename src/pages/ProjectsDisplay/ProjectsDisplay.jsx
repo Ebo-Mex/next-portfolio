@@ -6,11 +6,11 @@ export const ProjectsDisplay = ({ projects }) => {
             <h2>Projects</h2>
             <ul className="projectsList">
                 {projects.map(
-                    ({ label, description, thumbnailImageSrc, id }, idx) => (
+                    ({ label, content, thumbnailImageSrc, id }, idx) => (
                         <li key={id}>
                             <ProjectCard
                                 label={label}
-                                description={description}
+                                content={content}
                                 thumbnailImageSrc={thumbnailImageSrc}
                                 idx={idx}
                             />
