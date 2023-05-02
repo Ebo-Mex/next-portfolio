@@ -84,5 +84,12 @@
                 "url": "https://google.com"
             }
         }
+    ],
+    "aboutme": [
+        "I live in the beautiful Yucatán Peninsula, I work in the Ksquare University as a JavaScript Associate Software Engineer, my main task at the moment is to complete my training to become Software Engineer. My main goal is to obtain a certification to demonstrate the skills acquired during this period.",
+        "I have a bachelor's degree in mechatronics engineering and thanks to my dedication I obtained the award for performance excellence in México for the 2020 period.",
+        "During my career, working with microcontrollers and the IoT ignited my interest in computer vision and this inspired me to go even beyond and learn to implement machine learning models for object recognition and tracking in my final year.",
+        "My mechatronics background taught me to adapt to new scenarios, to learn fast and to be a problem solver. When I began to take part in more ambitious programming projects, I realized that my past experiences still had value in this field. Nowadays, when I work in a project, I use it as an opportunity to learn something new and add more value to the experience.",
+        "On my free time, I love playing PC videogames. At the moment I am trying to finish Hades. As a fun fact, I also love playing Sudoku, so I try to play at least once a day to keep my skills fresh. I like watching series, anime, and manga from time to time, currently I am watching Invincible (pretty good if you like superhero stories with a dark twist) and I am reading the last part of the JoJo's manga."
     ]
 }
