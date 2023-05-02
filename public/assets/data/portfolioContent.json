@@ -58,26 +58,29 @@
     ],
     "achievements": [
         {
-            "title": "Something something",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "title": "Award of excellence in Mechatronics Engineering",
+            "organization": "The National Center for Evaluation of Superior Education (CENEVAL)",
+            "description": "Awarded due to my outstanding performance in all the areas of the exit examination for Mechatronic Engineering in the period January-December 2020.",
             "reference": {
-                "linkText": "link",
-                "url": "https://google.com"
+                "linkText": "CENEVAL website",
+                "url": "https://reconocimiento.ceneval.edu.mx/busqueda-de-reconocimientos-2/?resultId=%2020234"
             }
         },
         {
-            "title": "Another something",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "title": "Certificate on Python Programming Fundamentals",
+            "organization": "The EMTECH Institute",
+            "description": "Awarded for completing a 6-week training period on Python data types, structures, and training on basic Data Science applications on September 2020",
             "reference": {
-                "linkText": "link",
-                "url": "https://google.com"
+                "linkText": "EMTECH website",
+                "url": "https://alumni.emtech.digital/html/emtechs/Emtech-333/pub-Emtech-333.php#certificado1"
             }
         },
         {
-            "title": "some   thing",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "title": "JavaScript Developer I",
+            "organization": "Trailhead Academy",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "reference": {
-                "linkText": "link",
+                "linkText": "TODO",
                 "url": "https://google.com"
             }
         }
