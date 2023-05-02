@@ -30,7 +30,7 @@ export const MainView = () => {
                     <Toolbox items={portfolioData.toolboxItems} />
                     <ProjectsDisplay projects={portfolioData.projects} />
                     <BragSection achievements={portfolioData.achievements} />
-                    <MoreAboutMe />
+                    <MoreAboutMe about={portfolioData.aboutme} />
                 </div>
             )}
         </>
