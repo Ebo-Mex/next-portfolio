@@ -4,7 +4,7 @@ Welcome, this is a Next project containing my web dev portfolio 👨‍💻
 
 ## Pending tasks
 
-- [ ] Complete data content migration.
+- [X] Complete data content migration.
 - [ ] Add functionality to nav bar.
 - [ ] Decide & apply a color palette.
 - [ ] Work on sections paddings.
