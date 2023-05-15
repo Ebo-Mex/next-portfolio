@@ -1,9 +1,13 @@
-import { IntroductionCard } from "@/components";
+import { IntroductionCard, Loading } from "@/components";
 
 export const Welcome = ({ introduction }) => {
     return (
-        <div className="welcomeContainer">
-            <IntroductionCard description={introduction.description} />
+        <div id="home" className="welcomeContainer">
+            {introduction ? (
+                <IntroductionCard description={introduction.description} />
+            ) : (
+                <Loading />
+            )}
         </div>
     );
 };
