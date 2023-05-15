@@ -1,3 +1,5 @@
+import { Loading } from "@/components";
+
 export const Toolbox = ({ items }) => {
     const listItems = items
         ? items.map(({ label, logoUrl }, idx) => (
@@ -8,9 +10,13 @@ export const Toolbox = ({ items }) => {
           ))
         : [];
     return (
-        <div className="toolboxContainer">
+        <div id="toolbox" className="toolboxContainer">
             <h2>Toolbox</h2>
-            <ul className="itemsContainer">{listItems}</ul>
+            {items ? (
+                <ul className="itemsContainer">{listItems}</ul>
+            ) : (
+                <Loading />
+            )}
         </div>
     );
 };
