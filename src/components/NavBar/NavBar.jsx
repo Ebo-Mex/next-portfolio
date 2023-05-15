@@ -1,14 +1,15 @@
+import Link from "next/link";
+
 export const NavBar = () => {
-    // TODO CHANGE HOME TO AN ICON
     return (
         <div className="navBarContainer">
-            <ul className="navBar">
-                <li>HOME</li>
-                <li>TOOLBOX</li>
-                <li>PROJECTS</li>
-                <li>AWARDS</li>
-                <li>ABOUT ME</li>
-            </ul>
+            <div className="navBar">
+                <Link href="#home">HOME</Link>
+                <Link href="#toolbox">TOOLBOX</Link>
+                <Link href="#projects">PROJECTS</Link>
+                <Link href="#awards">AWARDS</Link>
+                <Link href="#aboutme">ABOUT ME</Link>
+            </div>
         </div>
     );
 };
