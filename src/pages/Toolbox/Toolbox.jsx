@@ -4,8 +4,10 @@ export const Toolbox = ({ items }) => {
     const listItems = items
         ? items.map(({ label, logoUrl }, idx) => (
               <li key={`tool-${idx}`}>
-                  {logoUrl ? <img src={logoUrl} alt="" /> : null}
-                  {label}
+                  <div className="toolContent">
+                      {logoUrl ? <img src={logoUrl} alt="" /> : null}
+                      {label}
+                  </div>
               </li>
           ))
         : [];
