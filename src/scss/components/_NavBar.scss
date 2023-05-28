@@ -1,5 +1,6 @@
 .navBarContainer {
-    background-color: rgb(38, 28, 99);
+    background-color: #e63946;
+    box-shadow: 0 0.5px 1px black;
     padding: 24px 0;
     position: sticky;
     top: 0;
@@ -12,14 +13,24 @@
         margin: 0;
         padding: 0;
         a {
-            background-color: rgb(236, 231, 253);
+            color: #f1faee;
+            letter-spacing: 0.2em;
+            position: relative;
             text-decoration: none;
-            color: black;
-            border-radius: 8px;
-            padding: 4px 8px;
-            transition: all 1s ease-in-out;
-            &:hover {
-                padding: 4px 16px;
+            &:after {
+                background: #fff;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                transition: width 0.2s ease 0s, left 0.2s ease 0s;
+                width: 0;
+            }
+            &:hover:after {
+                left: 0;
+                width: 100%;
             }
         }
     }
