@@ -1,4 +1,4 @@
-import { ProjectCard, Loading } from "@/components";
+import { ProjectCard, Loader } from "@/components";
 
 export const ProjectsDisplay = ({ projects }) => {
     return (
@@ -20,7 +20,7 @@ export const ProjectsDisplay = ({ projects }) => {
                     )}
                 </ul>
             ) : (
-                <Loading />
+                <Loader />
             )}
         </div>
     );

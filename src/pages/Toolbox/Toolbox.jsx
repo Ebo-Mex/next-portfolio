@@ -1,4 +1,4 @@
-import { Loading } from "@/components";
+import { Loader } from "@/components";
 
 export const Toolbox = ({ items }) => {
     const listItems = items
@@ -17,7 +17,7 @@ export const Toolbox = ({ items }) => {
             {items ? (
                 <ul className="itemsContainer">{listItems}</ul>
             ) : (
-                <Loading />
+                <Loader />
             )}
         </div>
     );
