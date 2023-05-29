@@ -1,3 +1,3 @@
-import { Loading } from "@/components/Common/Loading";
+import { Loader } from "@/components/Common/Loader";
 
-export default Loading;
+export default Loader;

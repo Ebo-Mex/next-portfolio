@@ -1,4 +1,4 @@
-import { Loading } from "@/components";
+import { Loader } from "@/components";
 
 export const MoreAboutMe = ({ about }) => {
     return (
@@ -7,7 +7,7 @@ export const MoreAboutMe = ({ about }) => {
             {about ? (
                 about.map((data, idx) => <p key={`aboutme-${idx}`}>{data}</p>)
             ) : (
-                <Loading />
+                <Loader />
             )}
         </div>
     );

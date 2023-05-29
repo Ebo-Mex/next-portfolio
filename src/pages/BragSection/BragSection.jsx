@@ -1,4 +1,4 @@
-import { AchievementCard, Loading } from "@/components";
+import { AchievementCard, Loader } from "@/components";
 
 export const BragSection = ({ achievements }) => {
     return (
@@ -23,7 +23,7 @@ export const BragSection = ({ achievements }) => {
                     )}
                 </ul>
             ) : (
-                <Loading />
+                <Loader />
             )}
         </div>
     );
