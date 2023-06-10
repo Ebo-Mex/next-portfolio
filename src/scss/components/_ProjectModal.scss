@@ -1,0 +1,73 @@
+.projectModalContainer {
+    background-color: #a8dadc;
+    border-radius: 16px;
+    border: none;
+    height: 600px;
+    padding: 0;
+    width: 800px;
+    &[open] {
+        animation: modalFadeIn 0.25s ease normal;
+    }
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    header {
+        align-items: center;
+        display: flex;
+        height: 96px;
+        justify-content: center;
+        letter-spacing: 1.5px;
+        line-height: normal;
+        text-align: center;
+    }
+    div {
+        height: calc(600px - 96px - 80px);
+        overflow: auto;
+        padding: 16px 32px;
+        text-align: justify;
+    }
+    footer {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 8px 24px;
+        button {
+            background-color: #e63946;
+            border-radius: 16px 4px;
+            border: none;
+            color: #f1faee;
+            cursor: pointer;
+            letter-spacing: 1.25px;
+            padding: 4px 16px;
+            &.in {
+                animation: buttonColorIn 1s ease 1 forwards;
+            }
+            &.out {
+                animation: buttonColorOut 1s ease 1 forwards;
+            }
+            @keyframes buttonColorIn {
+                25% {
+                    background: #cfcb15;
+                }
+                100% {
+                    background: #32589d;
+                }
+            }
+            @keyframes buttonColorOut {
+                25% {
+                    background: #cfcb15;
+                }
+                100% {
+                    background: #e63946;
+                }
+            }
+        }
+    }
+}
