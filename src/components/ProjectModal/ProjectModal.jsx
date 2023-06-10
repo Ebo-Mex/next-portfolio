@@ -10,10 +10,16 @@ export const ProjectModal = ({ isOpen, content, title, handleClose }) => {
         }
     }, [isOpen]);
 
+    const closeHandler = () => {
+        updateButtonClasses("");
+        handleClose();
+        return;
+    };
+
     return (
         <dialog
             className="projectModalContainer"
-            onClose={handleClose}
+            onClose={closeHandler}
             ref={modalRef}
         >
             <header>

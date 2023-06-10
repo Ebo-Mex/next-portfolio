@@ -1,20 +1,13 @@
 .projectModalContainer {
     background-color: #a8dadc;
-    border-radius: 16px;
+    border-radius: 16px 4px;
     border: none;
+    box-shadow: 2px 2px 8px black;
     height: 600px;
     padding: 0;
     width: 800px;
     &[open] {
-        animation: modalFadeIn 0.25s ease normal;
-    }
-    @keyframes modalFadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+        animation: modalFadeIn 0.5s ease normal;
     }
     header {
         align-items: center;
@@ -39,35 +32,46 @@
         width: 100%;
         padding: 8px 24px;
         button {
-            background-color: #e63946;
             border-radius: 16px 4px;
-            border: none;
-            color: #f1faee;
-            cursor: pointer;
-            letter-spacing: 1.25px;
-            padding: 4px 16px;
             &.in {
-                animation: buttonColorIn 1s ease 1 forwards;
+                animation: buttonColorIn 0.5s ease 1 forwards;
             }
             &.out {
-                animation: buttonColorOut 1s ease 1 forwards;
-            }
-            @keyframes buttonColorIn {
-                25% {
-                    background: #cfcb15;
-                }
-                100% {
-                    background: #32589d;
-                }
-            }
-            @keyframes buttonColorOut {
-                25% {
-                    background: #cfcb15;
-                }
-                100% {
-                    background: #e63946;
-                }
+                animation: buttonColorOut 0.5s ease 1 forwards;
             }
         }
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes buttonColorIn {
+    0% {
+        background: #e63946;
+    }
+    25% {
+        background: #9f0611;
+    }
+    100% {
+        background: #32589d;
+    }
+}
+
+@keyframes buttonColorOut {
+    0% {
+        background: #32589d;
+    }
+    25% {
+        background: #0e306d;
+    }
+    100% {
+        background: #e63946;
     }
 }
