@@ -10,10 +10,10 @@ export const ProjectsDisplay = ({ projects }) => {
                         ({ label, content, thumbnailImageSrc, id }, idx) => (
                             <li key={id}>
                                 <ProjectCard
-                                    label={label}
                                     content={content}
+                                    key={idx}
+                                    label={label}
                                     thumbnailImageSrc={thumbnailImageSrc}
-                                    idx={idx}
                                 />
                             </li>
                         )

@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { useState } from "react";
+import { ProjectModal } from "@/components";
 
-export const ProjectCard = ({ label, content, thumbnailImageSrc, idx }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    const isOdd = idx % 2 === 1;
+export const ProjectCard = ({ label, content, thumbnailImageSrc }) => {
+    const [openModal, updateOpenModal] = useState(false);
 
     return (
-        <div className={"projectCardContainer " + (isOdd ? "odd" : "even")}>
+        <div className="projectCardContainer">
             {thumbnailImageSrc ? (
                 <div className="imageContainer">
                     <Image
@@ -22,24 +21,23 @@ export const ProjectCard = ({ label, content, thumbnailImageSrc, idx }) => {
             ) : null}
             <div className="cardData">
                 <h3 className="cardTitle">{label}</h3>
-                <div>
-                    <p className="cardContent">{content[0]}</p>
-                    {isExpanded
-                        ? content.slice(1).map((paragraph, pidx) => (
-                              <p className="cardContent" key={`${idx}-${pidx}`}>
-                                  {paragraph}
-                              </p>
-                          ))
-                        : ""}
+                <div className="cardContent">
+                    <p>{content[0]}</p>
                     {content.length > 1 ? (
-                        <button onClick={() => setIsExpanded(!isExpanded)}>
-                            {isExpanded ? "Show less" : "Read more"}
+                        <button onClick={() => updateOpenModal(!openModal)}>
+                            <span>Read more</span>
                         </button>
                     ) : (
                         ""
                     )}
                 </div>
             </div>
+            <ProjectModal
+                content={content}
+                handleClose={() => updateOpenModal(!openModal)}
+                isOpen={openModal}
+                title={label}
+            />
         </div>
     );
 };

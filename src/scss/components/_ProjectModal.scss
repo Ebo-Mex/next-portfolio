@@ -1,0 +1,94 @@
+.projectModalContainer {
+    background-color: #a8dadc;
+    border-radius: 16px 4px;
+    border: none;
+    box-shadow: 2px 2px 8px black;
+    height: 600px;
+    padding: 0;
+    width: 800px;
+    &[open] {
+        animation: modalFadeIn 0.5s ease normal;
+    }
+    header {
+        align-items: center;
+        display: flex;
+        height: 96px;
+        justify-content: center;
+        letter-spacing: 1.5px;
+        line-height: normal;
+        text-align: center;
+    }
+    div {
+        height: calc(600px - 96px - 80px);
+        overflow: auto;
+        padding: 16px 32px;
+        text-align: justify;
+    }
+    footer {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 8px 24px;
+        button {
+            border-radius: 16px 4px;
+            position: relative;
+            &::before {
+                background-color: #32589d;
+                border-radius: 16px 4px;
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                transform-origin: center;
+                transform: scale(0);
+                transition: transform 0.25s ease;
+                width: 100%;
+            }
+            &:hover {
+                &::before {
+                    transform: scale(1);
+                    transform-origin: center;
+                }
+            }
+            span {
+                position: relative;
+            }
+        }
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes buttonColorIn {
+    0% {
+        background: #e63946;
+    }
+    25% {
+        background: #9f0611;
+    }
+    100% {
+        background: #32589d;
+    }
+}
+
+@keyframes buttonColorOut {
+    0% {
+        background: #32589d;
+    }
+    25% {
+        background: #0e306d;
+    }
+    100% {
+        background: #e63946;
+    }
+}

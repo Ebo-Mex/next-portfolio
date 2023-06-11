@@ -1,16 +1,9 @@
 .projectCardContainer {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex-direction: row;
     gap: 80px;
-    &.odd {
-        flex-direction: row-reverse;
-        .cardTitle {
-            text-align: right;
-        }
-    }
     .imageContainer {
-        height: auto;
         height: 100%;
         position: relative;
         width: 300px;
@@ -23,18 +16,56 @@
     .cardData {
         display: flex;
         flex-direction: column;
-        gap: 24px;
-        max-width: 60vw;
+        gap: 32px;
+        max-width: 800px;
+        width: 60vw;
         .cardContent {
-            margin-bottom: 1em;
-            text-align: justify;
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            justify-content: space-between;
+            p {
+                margin-bottom: 0;
+                text-align: justify;
+            }
+            button {
+                min-width: 120px;
+                width: 120px;
+                position: relative;
+                &::before {
+                    background-color: #f1faee;
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transform-origin: right center;
+                    transform: scaleX(0);
+                    transition: transform 0.16s ease-out;
+                    width: 100%;
+                }
+                &:hover {
+                    &::before {
+                        transform-origin: left center;
+                        transform: scaleX(1);
+                    }
+                    span {
+                        color: #ca1421;
+                    }
+                }
+                span {
+                    transition: color 0.25s ease;
+                    font-weight: bold;
+                    position: relative;
+                }
+            }
         }
     }
 }
 // MOBILE
 @media only screen and (max-width: 1000px) {
-    .projectCardContainer,
-    .projectCardContainer.odd {
+    .projectCardContainer {
         flex-direction: column-reverse;
         .imageContainer {
             width: 60vw;
