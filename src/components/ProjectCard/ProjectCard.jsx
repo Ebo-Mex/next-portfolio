@@ -3,11 +3,10 @@ import { useState } from "react";
 import { ProjectModal } from "@/components";
 
 export const ProjectCard = ({ label, content, thumbnailImageSrc, idx }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const isOdd = idx % 2 === 1;
+    const [openModal, updateOpenModal] = useState(false);
 
     return (
-        <div className={"projectCardContainer " + (isOdd ? "odd" : "even")}>
+        <div className="projectCardContainer">
             {thumbnailImageSrc ? (
                 <div className="imageContainer">
                     <Image
@@ -22,11 +21,11 @@ export const ProjectCard = ({ label, content, thumbnailImageSrc, idx }) => {
             ) : null}
             <div className="cardData">
                 <h3 className="cardTitle">{label}</h3>
-                <div>
-                    <p className="cardContent">{content[0]}</p>
+                <div className="cardContent">
+                    <p>{content[0]}</p>
                     {content.length > 1 ? (
-                        <button onClick={() => setIsExpanded(!isExpanded)}>
-                            Read more
+                        <button onClick={() => updateOpenModal(!openModal)}>
+                            <span>Read more</span>
                         </button>
                     ) : (
                         ""
@@ -35,8 +34,8 @@ export const ProjectCard = ({ label, content, thumbnailImageSrc, idx }) => {
             </div>
             <ProjectModal
                 content={content}
-                handleClose={() => setIsExpanded(!isExpanded)}
-                isOpen={isExpanded}
+                handleClose={() => updateOpenModal(!openModal)}
+                isOpen={openModal}
                 title={label}
             />
         </div>
