@@ -1,7 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 export const ProjectModal = ({ isOpen, content, title, handleClose }) => {
-    const [buttonClasses, updateButtonClasses] = useState("");
     const modalRef = useRef(null);
 
     useEffect(() => {
@@ -11,7 +10,6 @@ export const ProjectModal = ({ isOpen, content, title, handleClose }) => {
     }, [isOpen]);
 
     const closeHandler = () => {
-        updateButtonClasses("");
         handleClose();
         return;
     };
@@ -31,13 +29,8 @@ export const ProjectModal = ({ isOpen, content, title, handleClose }) => {
                 ))}
             </div>
             <footer>
-                <button
-                    className={buttonClasses}
-                    onMouseEnter={() => updateButtonClasses("in")}
-                    onMouseLeave={() => updateButtonClasses("out")}
-                    onClick={() => modalRef.current.close()}
-                >
-                    Close
+                <button onClick={() => modalRef.current.close()}>
+                    <span>Close</span>
                 </button>
             </footer>
         </dialog>

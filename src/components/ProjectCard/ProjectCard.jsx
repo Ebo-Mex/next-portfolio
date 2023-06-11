@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ProjectModal } from "@/components";
 
-export const ProjectCard = ({ label, content, thumbnailImageSrc, idx }) => {
+export const ProjectCard = ({ label, content, thumbnailImageSrc }) => {
     const [openModal, updateOpenModal] = useState(false);
 
     return (

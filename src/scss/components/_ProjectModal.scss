@@ -33,11 +33,28 @@
         padding: 8px 24px;
         button {
             border-radius: 16px 4px;
-            &.in {
-                animation: buttonColorIn 0.5s ease 1 forwards;
+            position: relative;
+            &::before {
+                background-color: #32589d;
+                border-radius: 16px 4px;
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                transform-origin: center;
+                transform: scale(0);
+                transition: transform 0.25s ease;
+                width: 100%;
             }
-            &.out {
-                animation: buttonColorOut 0.5s ease 1 forwards;
+            &:hover {
+                &::before {
+                    transform: scale(1);
+                    transform-origin: center;
+                }
+            }
+            span {
+                position: relative;
             }
         }
     }
