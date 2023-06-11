@@ -12,6 +12,6 @@ Welcome, this is a Next project containing my web dev portfolio 👨‍💻
 - [ ] Work on minimal responsiveness.
 - [ ] Add contact me data to 'Even more about me' section.
 - [x] Add interaction to toolbox.
-- [ ] Add smoothness to project section actions.
+- [x] Add smoothness to project section actions.
 - [ ] Expand & improve sections content.
 - [ ] Consider adding spanish language version.
