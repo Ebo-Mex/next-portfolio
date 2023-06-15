@@ -2,13 +2,18 @@ import { useState } from "react";
 
 export const AchievementCarousel = ({ achievements }) => {
     const [selectedItem, setSelectedItem] = useState(0);
+    const [isSelectorDisabled, setIsSelectorDisabled] = useState(false);
 
     const handleItemSelection = (e, idx) => {
         e.preventDefault();
         setSelectedItem(null);
+        setIsSelectorDisabled(true);
         setTimeout(() => {
             setSelectedItem(idx);
-        }, 1500);
+            setTimeout(() => {
+                setIsSelectorDisabled(false);
+            }, 800);
+        }, 800);
     };
 
     return (
@@ -31,7 +36,10 @@ export const AchievementCarousel = ({ achievements }) => {
                             </a>
                         </div>
                         <a
-                            className="itemSelector"
+                            className={
+                                "itemSelector " +
+                                (isSelectorDisabled ? "disabled" : "")
+                            }
                             onClick={(e) => handleItemSelection(e, idx)}
                         ></a>
                     </div>

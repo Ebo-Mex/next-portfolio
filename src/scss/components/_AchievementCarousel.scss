@@ -2,15 +2,15 @@
 
 .achievementCarouselContainer {
     background-color: #457b9d;
-    box-shadow: 0.5px 0.5px 4px black;
+    border-radius: 4px;
+    box-shadow: 0.5px 0.5px 4px hsla(0, 0%, 0%, 0.8);
     display: flex;
-    margin: 32px 0;
-    max-width: 100%;
     height: 60vh;
+    margin: 40px 0 0;
     max-height: 600px;
+    max-width: 100%;
     .carouselItem {
         align-items: center;
-        border: 1px solid black;
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -18,45 +18,53 @@
         max-height: 100%;
         padding: 32px;
         position: relative;
-        text-align: center;
-        transition: width 1s ease 0.5s;
+        transition: width 400ms ease 400ms;
         width: calc(100% / 3);
-        .itemSelector::before {
-            bottom: 0;
-            content: "";
-            cursor: pointer;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
+        .itemSelector {
+            &::before {
+                bottom: 0;
+                content: "";
+                cursor: pointer;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            &.disabled {
+                &::before {
+                    z-index: -1;
+                }
+            }
+        }
+        .title {
+            text-align: center;
         }
         .dataContainer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease;
+            transition: max-height 400ms ease;
             .description,
             .organization,
             .reference {
                 opacity: 0;
-                transition: opacity 0.5s ease;
+                text-align: justify;
+                transition: opacity 400ms ease;
             }
         }
         &.expanded {
             width: 100%;
+            transition: width 400ms ease;
             .itemSelector::before {
                 z-index: -1;
             }
             .dataContainer {
                 max-height: 100vh;
-                transition: max-height 1s ease 1s;
+                transition: max-height 400ms ease 400ms;
                 .description,
                 .organization,
                 .reference {
                     opacity: 1;
-                    transition: opacity 1s ease 1s;
-                }
-                .description {
-                    text-align: justify;
+                    transition: opacity 400ms ease 400ms;
                 }
                 .reference {
                     a {
@@ -65,6 +73,9 @@
                     }
                 }
             }
+        }
+        &:not(:last-child) {
+            border-right: 1px solid hsla(105, 55%, 96%, 0.25);
         }
     }
 }
