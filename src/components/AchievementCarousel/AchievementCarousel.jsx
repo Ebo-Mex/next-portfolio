@@ -23,23 +23,23 @@ export const AchievementCarousel = ({ achievements }) => {
                     <div
                         className={
                             "carouselItem " +
-                            (selectedItem === idx ? "expanded" : "")
+                            (selectedItem === idx ? "expanded " : "") +
+                            (isSelectorDisabled ? "disabled " : "")
                         }
                         key={idx}
                     >
-                        <h3 className="title">{title}</h3>
-                        <div className="dataContainer">
-                            <p className="description">{description}</p>
-                            <p className="organization">{organization}</p>
-                            <a className="reference" href={reference.url}>
-                                {reference.linkText}
-                            </a>
+                        <div className="carouselItemDataWrapper">
+                            <h3 className="title">{title}</h3>
+                            <div className="descriptionContainer">
+                                <p className="description">{description}</p>
+                                <p className="organization">{organization}</p>
+                                <a className="reference" href={reference.url}>
+                                    {reference.linkText}
+                                </a>
+                            </div>
                         </div>
                         <a
-                            className={
-                                "itemSelector " +
-                                (isSelectorDisabled ? "disabled" : "")
-                            }
+                            className="itemSelector"
                             onClick={(e) => handleItemSelection(e, idx)}
                         ></a>
                     </div>
