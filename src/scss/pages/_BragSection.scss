@@ -4,17 +4,6 @@
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100vh;
-    padding: 24px;
+    // padding: 24px;
     scroll-margin-top: 100px;
-    .achievementsList {
-        align-items: center;
-        align-self: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 80px;
-        justify-content: center;
-        list-style: none;
-        width: 90%;
-    }
 }

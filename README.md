@@ -15,3 +15,4 @@ Welcome, this is a Next project containing my web dev portfolio 👨‍💻
 - [x] Add smoothness to project section actions.
 - [ ] Expand & improve sections content.
 - [ ] Consider adding spanish language version.
+- [ ] Add text shadow to headers.
